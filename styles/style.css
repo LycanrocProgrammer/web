@@ -1,0 +1,924 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    width: 150px;
+    height: 50px;
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    font-weight: bold;
+    border: 2px solid #ff6600;
+}
+
+button:active {
+    color: #ff6600;
+    background-color: white;
+    border: 2px solid #ff6600;
+}
+
+.menu-container {
+    background-color: #130663;
+    display: flex;
+    position: sticky;
+    top: 0;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 20;
+}
+
+.logo-section {
+    margin: 10px 0 10px 5%;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.options-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 5%;
+    gap: 50px;
+}
+
+.selected-option {
+    color: #fff;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #ff6600;
+    font-weight: bold;
+}
+
+.not-selected-option {
+    color: #c9c9c9;
+}
+
+.not-selected-option:hover {
+    color: #fff;
+    transform: scale(1.1);
+}
+
+a {
+    text-decoration: none;
+}
+
+.menu-contact-button {
+    width: 125px;
+    height: 35px;
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+.presentation-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 3% 0;
+}
+
+.title-presentation-section {
+    font-size: 500%;
+    font-weight: bold;
+    font-family: 'Blogger Sans';
+}
+
+.white-text {
+    color: #130663;
+}
+
+.orange-text {
+    color: #ff6600;
+}
+
+.slogan {
+    font-size: 200%;
+    color: #130663;
+    margin-top: 2%;
+    font-style: italic;
+}
+
+.presentation-container1 {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    padding-bottom: 5%;
+}
+
+.photo-decoration {
+    width: 600px;
+    height: auto;
+}
+
+.name-decoration {
+    position: absolute;
+    width: auto;
+    right: 1%;
+    z-index: 3;
+}
+
+.about-me-section {
+    position: relative;
+    padding-bottom: 10%;
+    background-image: url(../images/Cards/Background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.background {
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+.text-about-me {
+    position: relative;
+    z-index: 2;
+    padding: 10% 10% 0;
+    color: #130663;
+}
+
+.title-about-me-section {
+    font-family: 'Blogger Sans';
+    font-style: italic;
+    font-weight: bold;
+    font-size: 300%;
+    margin-bottom: 1%;
+}
+
+.name-decoration-about-me {
+    font-size: 125%;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.subtitle-about-me-section {
+    margin-bottom: 5%;
+    font-size: 200%;
+}
+
+.main-text-about-me-section {
+    font-size: 125%;
+    padding-right: 30%;
+    margin-bottom: 5%;
+}
+
+.cards-about-me-section {
+    width: 100%;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.card1 {
+    width: 800px;
+    height: 900px;
+    background-color: #fff;
+    border-radius: 75px;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+}
+
+.slideInFromLeft {
+    animation: slideInFromLeft 1s ease-out forwards;
+    opacity: 1;
+}
+
+.card1:visible {
+    visibility: visible;
+}
+
+.card1-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    background-color: #130663;
+    color: #fff;
+    border-radius: 75px 75px 0 0;
+    padding: 5%;
+    text-align: center;
+    gap: 20%;
+}
+
+.title-card1-header {
+    padding-bottom: 10px;
+    border-bottom: 3px solid #ff6600;
+    font-weight: bold;
+    margin-bottom: 5%;
+}
+
+.subtitle-card1-header {
+    font-style: italic;
+}
+
+.card1-body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 5% 0;
+}
+
+.text-card1-body-section {
+    display: flex;
+    justify-content: center;
+    border-bottom: 3px solid #ff6600;
+    padding: 5% 0;
+    font-style: italic;
+}
+
+ul li {
+    margin-top: 5%;
+    font-size: 20px;
+}
+
+ul li::marker {
+    color: #ff6600;
+}
+
+.card1-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35%;
+    margin-top: 5%;
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.card2 {
+    width: 800px;
+    height: 900px;
+    background-color: #fff;
+    border-radius: 75px;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+}
+
+.slideInFromRight {
+    animation: slideInFromRight 1s ease-out forwards;
+    opacity: 1;
+}
+
+.card2-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    background-color: #2b1b8d;
+    color: #fff;
+    border-radius: 75px 75px 0 0;
+    padding: 5%;
+    text-align: center;
+    gap: 20%;
+}
+
+.title-card2-header {
+    padding-bottom: 10px;
+    border-bottom: 3px solid #ff6600;
+    font-weight: bold;
+    margin-bottom: 5%;
+}
+
+.subtitle-card2-header {
+    font-style: italic;
+}
+
+.card2-body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 5% 0;
+}
+
+.text-card2-body-section {
+    display: flex;
+    justify-content: center;
+    border-bottom: 3px solid #ff6600;
+    padding: 5% 0;
+    font-style: italic;
+}
+
+.card2-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35%;
+    margin-top: 5%;
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.skills-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url(../images/Testimonial/Background_white.png);
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-block: 5%;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+}
+
+.slideInFromBottom {
+    animation: slideInFromBottom 1s ease-out forwards;
+    opacity: 1;
+}
+
+.skills-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #130663;
+}
+
+.skills-header h1 {
+    font-family: 'Blogger Sans';
+    font-style: italic;
+    font-weight: bold;
+    font-size: 300%;
+}
+
+.skills-section p {
+    text-align: center;
+    font-size: 125%;
+    padding-inline: 30%;
+    margin-top: 2%;
+}
+
+.aditional-name-decoration {
+    position: absolute;
+    width: auto;
+    left: 1%;
+    z-index: 90;
+}
+
+.skills {
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+}
+
+.skills .skills-heading {
+    font-weight: bold;
+    font-size: 300%;
+    font-style: italic;
+    color: #130663;
+    text-align: center;
+}
+
+.skills-bar {
+    padding: 25px 30px;
+}
+
+.skills-bar .bar {
+    margin: 25px 0;
+}
+
+.skills-bar .bar .info span {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.skills-bar .bar .info {
+    margin-bottom: 8px;
+    color: #130663;
+}
+
+.skills-bar .bar .progress-line {
+    position: relative;
+    height: 10px;
+    width: 550px;
+    background: #f0f0f0;
+    border-radius: 10px;
+}
+
+.bar .progress-line span {
+    position: absolute;
+    background: #ff6600;
+    height: 100%;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+@keyframes animate {
+    100% {
+      transform: scaleX(1);
+    }
+}
+
+.progress-line .html {
+    width: 90%;
+}
+
+.progress-line .css {
+    width: 80%;
+}
+
+.progress-line .bootstrap {
+    width: 75%;
+}
+
+.progress-line .javascript {
+    width: 80%;
+}
+
+.progress-line .spring {
+    width: 60%;
+}
+
+.progress-line .angular {
+    width: 70%;
+}
+
+.bar .progress-line span::before {
+    position: absolute;
+    content: "";
+    height: 0;
+    right: 0;
+    top: -12px;
+    width: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-style: #f0f0f0;
+    border-top-color: #f0f0f0;
+}
+
+.bar .progress-line span::after {
+    position: absolute;
+    right: 0;
+    top: -28px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    background-color: #130663;
+    padding: 1px 8px;
+    border-radius: 3px;
+}
+
+.progress-line .html::after {
+    content: "90%";
+}
+
+.progress-line .css::after {
+    content: "80%";
+}
+
+.progress-line .bootstrap::after {
+    content: "75%";
+}
+
+.progress-line .javascript::after {
+    content: "80%";
+}
+
+.progress-line .spring::after {
+    content: "60%";
+}
+.progress-line .angular::after {
+    content: "70%";
+}
+
+.curriculum-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.curriculum-section h2 {
+    font-family: 'Blogger Sans';
+    font-style: italic;
+    font-weight: bold;
+    color: #130663;
+}
+
+.curriculum-section p {
+    text-align: center;
+    font-size: 125%;
+    padding-inline: 30%;
+    margin-block: 2%;
+    color: #130663;
+}
+
+footer {
+    background-color: #130663;
+    width: 100%;
+    height: auto;
+}
+
+.footer-container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    padding: 3% 0 3% 5%;
+    text-align: center;
+}
+
+.footer-container h4 {
+    margin-bottom: 25px;
+}
+
+.footer-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-right: 20%;
+}
+
+.footer-icon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    font-size: 50px;
+    margin-right: 20%;
+    color: #ff6600;
+}
+
+.footer-container h4 {
+    font-style: italic
+}
+
+.alternative-aditional-name-decoration {
+    position: absolute;
+    width: 100px;
+    right: 1%;
+    top: -60%;
+    z-index: 998;
+}
+
+.personal-proyects-section {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background-color: #F2F0FF;
+}
+
+.personal-proyects-section img {
+    width: 30%;
+    height: 100%;
+    border-radius: 50px 0 0 50px;
+    object-fit: cover;
+    object-position: center;
+    border-right: 3px solid #ff6600;
+}
+
+.personal-proyects-section button {
+    width: 125px;
+    height: 35px;
+    margin-top: 5%;
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+.personal-proyects-section h2 {
+    border-bottom: 3px solid #ff6600;
+}
+
+.personal-proyect-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5%;
+    padding-inline: 20%;
+    text-align: center;
+    color: #130663;
+    background-color: #F2F0FF;
+}
+
+.personal-proyect-header h1 {
+    font-style: italic;
+    font-family: 'Blogger Sans';
+    font-weight: bold;
+    margin-bottom: 2%;
+}
+
+.personal-proyect-text {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding-block: 30px;
+}
+
+.first-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 700px;
+    margin-left: 5%;
+    margin-right: 2%;
+    margin-block: 5%;
+}
+
+.personal-proyect1 {
+    display: flex;
+    width: 100%;
+    height: 200px;
+    border-radius: 50px;
+    background-color: #130663;
+    color: white;
+    border: 2px solid #ff6600;
+}
+
+.personal-proyect3 {
+    display: flex;
+    width: 100%;
+    height: 200px;
+    border-radius: 50px;
+    background-color: #130663;
+    color: white;
+    border: 2px solid #ff6600;
+}
+
+.personal-proyect5 {
+    display: flex;
+    width: 100%;
+    height: 200px;
+    border-radius: 50px;
+    background-color: #130663;
+    color: white;
+    border: 2px solid #ff6600;
+}
+
+.second-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 700px;
+    margin-left: 2%;
+    margin-right: 5%;
+    margin-top: 5%;
+}
+
+.personal-proyect2 {
+    display: flex;
+    width: 100%;
+    height: 200px;
+    border-radius: 50px;
+    background-color: #130663;
+    color: white;
+    border: 2px solid #ff6600;
+}
+
+.personal-proyect4 {
+    display: flex;
+    width: 100%;
+    height: 200px;
+    border-radius: 50px;
+    background-color: #130663;
+    color: white;
+    border: 2px solid #ff6600;
+}
+
+.personal-proyect6 {
+    display: flex;
+    width: 100%;
+    height: 200px;
+    border-radius: 50px;
+    background-color: #130663;
+    color: white;
+    border: 2px solid #ff6600;
+}
+
+.education-section {
+    width: 100%;
+    height: auto;
+    padding-block: 5%;
+}
+
+.education-section img {
+    width: 400px;
+    height: 300px;
+    border-radius: 50px;
+}
+
+.education-section p {
+    font-size: 125%;
+}
+
+.presentation {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2%;
+}
+
+.presentation h1 {
+    font-family: 'Blogger Sans';
+    font-style: italic;
+    font-weight: bold;
+    color: #130663;
+}
+
+.my-studies {
+    margin-inline: 5%;
+    padding-left: 5%;
+    color: #130663;
+    border-left: 3px solid #ff6600;
+}
+
+.my-studies h2 {
+    font-family: 'Blogger Sans';
+    font-style: italic;
+    font-weight: bold;
+    margin-bottom: 2%;
+}
+
+.my-studies h3 {
+    /*display: inline-block permite que la decoración inferior se adapte al tamaño del h3 en vez del ancho del contenedor*/
+    display: inline-block;
+    border-bottom: 3px solid #ff6600;
+    font-weight: bold;
+    margin-bottom: 2%;
+}
+
+.my-studies h5 {
+    color: #ff6600;
+    margin-bottom: 5%;
+}
+
+.ies-reyes-de-espania {
+    display: flex;
+    justify-content: space-between;
+    border-left: 3px solid #130663;
+    padding-left: 5%;
+}
+
+.ies-himilce {
+    display: flex;
+    justify-content: space-between;
+    margin-block: 5%;
+    border-left: 3px solid #130663;
+    padding-left: 5%;
+}
+
+.estech {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5%;
+    border-left: 3px solid #130663;
+    padding-left: 5%;
+}
+
+.my-studies-text {
+    margin-right: 3%;
+}
+
+.my-languages {
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    margin-inline: 5%;
+    padding-right: 5%;
+    color: #130663;
+    border-right: 3px solid #ff6600;
+}
+
+.my-languages h2 {
+    font-family: 'Blogger Sans';
+    font-style: italic;
+    font-weight: bold;
+    margin-bottom: 2%;
+}
+
+.my-languages h3 {
+    display: inline-block;
+    border-bottom: 3px solid #ff6600;
+    font-weight: bold;
+    margin-bottom: 2%;
+}
+
+.my-languages h5 {
+    color: #ff6600;
+    margin-bottom: 5%;
+}
+
+.english {
+    display: flex;
+    justify-content: end;
+    border-right: 3px solid #130663;
+    padding-right: 5%;
+}
+
+.my-languages-text {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin-left: 3%;
+}
+
+@media (max-width: 1350px) {
+    .menu-container {
+        margin-bottom: 50px;
+    }
+
+    .about-me-section {
+        height: 800px;
+        margin-bottom: 500px;
+        
+    }
+
+    .main-text-about-me-section {
+        margin-bottom: 100px;
+    }
+
+    .card1, .card2 {
+        width: 60%;
+    }
+
+    .card1 h1, .card2 h1 {
+        font-size: 30px;
+    }
+
+    .card1 h4, .card2 h4 {
+        font-size: 20px;
+    }
+
+    .card1 img, .card2 img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1261px) {
+    .presentation-section {
+        text-align: center;
+    }
+}
